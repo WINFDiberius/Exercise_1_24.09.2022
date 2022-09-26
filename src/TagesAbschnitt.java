@@ -6,6 +6,39 @@ import java.util.Date;
 public class TagesAbschnitt {
     public static void main(String[] args) {
 
+        //Aufruf der beiden Methoden
+        simpleTagesAbschnitt();
+        complexTagesAbschnitt();
+    }
+
+    public static void simpleTagesAbschnitt()
+    {
+        int currentTime = 6;
+
+        if(currentTime >= 6 && currentTime < 9) {
+            System.out.println("Es ist noch sehr früh!");
+        }
+
+        else if(currentTime >= 9 && currentTime < 12)
+        {
+            System.out.println("Es ist Vormittag!");
+        }
+        else if(currentTime >= 12 && currentTime < 16)
+        {
+            System.out.println("Es ist Nachmittag!");
+        }
+        else if(currentTime >= 16 && currentTime < 20)
+        {
+            System.out.println("Es ist Abend!");
+        }
+        else
+        {
+            System.out.println("Es ist Nacht!");
+        }
+    }
+
+    public static void complexTagesAbschnitt()
+    {
         //Gibt mir die aktuelle Zeit
         LocalTime current = LocalTime.now();
 
@@ -60,30 +93,6 @@ public class TagesAbschnitt {
         else
         {
             System.out.println("Es ist " + sdf.format(new Date()) + " nachts!");
-        }
-
-
-        int currentTime = 6;
-
-        if(currentTime >= 6 && currentTime < 9) {
-            System.out.println("Es ist noch sehr früh!");
-        }
-
-        else if(currentTime >= 9 && currentTime < 12)
-        {
-            System.out.println("Es ist Vormittag!");
-        }
-        else if(currentTime >= 12 && currentTime < 16)
-        {
-            System.out.println("Es ist Nachmittag!");
-        }
-        else if(currentTime >= 16 && currentTime < 20)
-        {
-            System.out.println("Es ist Abend!");
-        }
-        else
-        {
-            System.out.println("Es ist Nacht!");
         }
     }
 }
